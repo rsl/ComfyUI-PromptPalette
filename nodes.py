@@ -1,6 +1,5 @@
 import os
 
-
 class PromptPalette:
     @classmethod
     def INPUT_TYPES(s):
@@ -31,9 +30,9 @@ class PromptPalette:
             # Remove inline comments
             if "//" in line:
                 line = line.split("//")[0].rstrip()
-            # Add comma
-            if not line.strip().endswith(","):
-                line = line + ", "
+            # # Add comma
+            # if not line.strip().endswith(","):
+            #     line = line + ", "
             filtered_lines.append(line)
         result = "\n".join(filtered_lines)
 
